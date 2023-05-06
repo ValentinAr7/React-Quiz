@@ -23,12 +23,15 @@ export function Container() {
             </div>
 
             <div className="answer-section">
-            <button className="quiz-button">{data.answer1}</button>
-            <button className="quiz-button">{data.answer2}</button>
-            <button className="quiz-button">{data.answer3}</button>
-            <button className="quiz-button">{data.answer4}</button>
-
+                {Object.keys(data)
+                    .filter(key => key.startsWith("answer"))
+                    .map(key => (
+                        <button key={key} className="quiz-button">
+                            {data[key]}
+                        </button>
+                    ))}
             </div>
+
 
 
 

@@ -7,14 +7,20 @@ export function Container() {
     const [index, setIndex] = useState(0)
     let data = info[index]
 
-    let hasNext = index < info.length - 1
+    let hasPrev = index > 0 
 
     function handleNext(){
         const nextIndex = index + 1;
         setIndex(nextIndex >= info.length ? 0 : nextIndex);
     }
 
-    
+    function handlePrevious(){
+        if(hasPrev){
+            setIndex(index - 1)
+        } else{
+            setIndex(info.length - 1)
+        }
+    }
 
 
 
@@ -27,7 +33,7 @@ export function Container() {
 
                 <div className="buttons-section">
                     <button onClick={handleNext} className="btnNext">Next</button>
-                    <button className="btnPrev">Previous</button>
+                    <button onClick={handlePrevious} className="btnPrev">Previous</button>
                 </div>
             </div>
 

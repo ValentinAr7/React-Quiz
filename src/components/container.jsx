@@ -4,10 +4,19 @@ import { info } from "../data"
 
 export function Container() {
 
+    const [index, setIndex] = useState(0)
+    let data = info[index]
+
+    let hasNext = index < info.length - 1
+
+    function handleNext(){
+        const nextIndex = index + 1;
+        setIndex(nextIndex >= info.length ? 0 : nextIndex);
+    }
+
+    
 
 
-    let data = info[0]
-    console.log(data);
 
     return (
         <div className="container">
@@ -17,7 +26,7 @@ export function Container() {
                 <p className="question">{data.question}</p>
 
                 <div className="buttons-section">
-                    <button className="btnNext">Next</button>
+                    <button onClick={handleNext} className="btnNext">Next</button>
                     <button className="btnPrev">Previous</button>
                 </div>
             </div>
@@ -32,9 +41,9 @@ export function Container() {
                     ))}
             </div>
 
-
-
-
         </div>
+
+
+
     )
 }

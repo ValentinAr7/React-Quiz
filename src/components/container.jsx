@@ -15,6 +15,7 @@ export function Container() {
     function handleNext() {
         const nextIndex = index + 1;
         setIndex(nextIndex >= info.length ? 0 : nextIndex);
+        setSelectedAnswer(null)
     }
 
     function handlePrevious() {
@@ -23,6 +24,8 @@ export function Container() {
         } else {
             setIndex(info.length - 1)
         }
+        setSelectedAnswer(null)
+
     }
 
 
@@ -42,6 +45,10 @@ export function Container() {
 
             <div className="answer-section">
 
+
+                {/* This code takes the object keys from the data and filters through all of them to find the keys which start with 'answer' so they can be displayed on the screen
+                then the button tag appliess the quiz-buttton css and checks if the key is = 'answerCorrect' apply  ( answer-button correct no-hover CSS) if not 
+                apply (incorrect no-hover CSS) */}
                 {Object.keys(data)
                     .filter(key => key.startsWith("answer"))
                     .map(key => (

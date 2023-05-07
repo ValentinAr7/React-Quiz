@@ -1,4 +1,4 @@
-.container{
+.container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -10,28 +10,29 @@
   background: rgb(21, 21, 93);
 
   border-radius: 20px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-.question-section{
-  margin-left: 5%;  
-
+.question-section {
+  margin-left: 5%;
+  flex-basis: 60%;
+  max-width: 60%;
 }
 
-.qstn{
+.qstn {
   color: aliceblue;
 }
 
-.question{
+.question {
   color: aliceblue;
   font-weight: 400;
   width: 100%;
-  
+
 }
 
-.buttons-section{
-position: absolute;
-bottom: 10px;
+.buttons-section {
+  position: absolute;
+  bottom: 10px;
 }
 
 
@@ -57,26 +58,47 @@ bottom: 10px;
 }
 
 .quiz-button.no-hover:hover {
-background-color: initial;
-border-width: 4px;
+  background-color: initial;
+  border-width: 4px;
 }
 
 
 
-.answer-section{
+.answer-section {
   margin: 20px;
-  display: flex; 
-  justify-content: center; 
+  display: flex;
   flex-direction: column;
+  justify-content: flex-end;
 }
 
-.correct{
-background-color: green;
-border-color: rgb(0, 67, 0);
+.correct {
+  background-color: green;
+  border-color: rgb(0, 67, 0);
 }
 
-.incorrect{
+.incorrect {
   background-color: red;
   border-color: rgb(131, 2, 2);
 }
 
+.btnPrev {
+  background-color: transparent;
+  color: aliceblue;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.btnNext {
+
+  background-color: transparent;
+  color: aliceblue;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.span {
+  font-size: 16px;
+  color: aliceblue;
+}

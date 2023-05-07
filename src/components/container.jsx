@@ -34,12 +34,17 @@ export function Container() {
         <div className="container">
 
             <div className="question-section">
-                <h2 className="qstn">Question</h2>
+                <h2 className="qstn">{
+                `Question ${index + 1} of ${info.length}`
+                 
+                }</h2>
+
                 <p className="question">{data.question}</p>
 
                 <div className="buttons-section">
-                    <button onClick={handleNext} className="btnNext">Next</button>
-                    <button onClick={handlePrevious} className="btnPrev">Previous</button>
+                <button onClick={handlePrevious} className="btnPrev">Previous</button>
+                <span className="span">|</span>
+                <button onClick={handleNext} className="btnNext">Next</button>
                 </div>
             </div>
 

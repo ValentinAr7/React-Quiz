@@ -63,3 +63,11 @@ bottom: 10px;
   flex-direction: column;
 }
 
+.correct{
+  border-color: green;
+}
+
+.incorrect{
+  border-color: red;
+}
+

@@ -12,5 +12,13 @@ export const info = [
       answer2: 'Real Madrid',
       answer3: 'Barcelona',
       answer4: 'AC Milan'
-    }
+    },
+
+    {
+      question: 'What is the capital city of Burkina Faso, a landlocked country in West Africa, known for its unique music and dance culture?',
+      answerCorrect: 'Ouagadougou',
+      answer2: 'Bujumbura',
+      answer3: 'Windhoek',
+      answer4: 'Lusaka'
+    },
   ];

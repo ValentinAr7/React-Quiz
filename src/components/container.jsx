@@ -9,7 +9,9 @@ export function Container() {
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
 
-    const handle
+    // const handleNextButton = () => {
+
+    // }
 
 	const handleAnswerOptionClick = (isCorrect) => {
 		if (isCorrect) {
@@ -36,10 +38,15 @@ export function Container() {
 							<span>Question {currentQuestion + 1}</span>/{questions.length}
 						</div>
 						<div className='question-text'>{questions[currentQuestion].questionText}</div>
+
+                        <div className="buttons-section">
+                            <button className="prev">Previous</button>
+                            <button className="next">Next</button>
+                        </div>
 					</div>
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
-							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+							<button className="buttons" onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
 						))}
 					</div>
 				</>

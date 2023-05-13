@@ -73,7 +73,7 @@ body {
   justify-content: space-between;
 }
 
-button {
+.buttons {
   width: 100%;
   font-size: 16px;
   color: #ffffff;
@@ -85,6 +85,25 @@ button {
   align-items: center;
   border: 2px solid #234668;
   cursor: pointer;
+}
+
+.buttons-section {
+  display: flex;
+  align-items: flex-end;
+  align-self: flex-end;
+  margin-top: 90px;
+}
+
+.prev{
+  background-color: #091337;
+  border: none;
+  font-weight: 600;
+}
+
+.next{
+  background-color: #091337;
+  border: none;
+  font-weight: 600;
 }
 
 .correct {

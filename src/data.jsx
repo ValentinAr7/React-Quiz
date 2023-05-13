@@ -1,24 +1,38 @@
-export const info = [
-    {
-      question: 'What is the biggest town in Bulgaria?',
-      answerCorrect: 'Sofia',
-      answer2: 'Plovdiv',
-      answer3: 'Varna',
-      answer4: 'Burgas'
-    },
-    {
-      question: 'What is the best team in Europe?',
-      answerCorrect: 'Liverpool',
-      answer2: 'Real Madrid',
-      answer3: 'Barcelona',
-      answer4: 'AC Milan'
-    },
-
-    {
-      question: 'What is the capital city of Burkina Faso, a landlocked country in West Africa, known for its unique music and dance culture?',
-      answerCorrect: 'Ouagadougou',
-      answer2: 'Bujumbura',
-      answer3: 'Windhoek',
-      answer4: 'Lusaka'
-    },
+export const questions = [
+  {
+    questionText: 'What is the capital of France?',
+    answerOptions: [
+      { answerText: 'New York', isCorrect: false },
+      { answerText: 'London', isCorrect: false },
+      { answerText: 'Paris', isCorrect: true },
+      { answerText: 'Dublin', isCorrect: false },
+    ],
+  },
+  {
+    questionText: 'Who is CEO of Tesla?',
+    answerOptions: [
+      { answerText: 'Jeff Bezos', isCorrect: false },
+      { answerText: 'Elon Musk', isCorrect: true },
+      { answerText: 'Bill Gates', isCorrect: false },
+      { answerText: 'Tony Stark', isCorrect: false },
+    ],
+  },
+  {
+    questionText: 'The iPhone was created by which company?',
+    answerOptions: [
+      { answerText: 'Apple', isCorrect: true },
+      { answerText: 'Intel', isCorrect: false },
+      { answerText: 'Amazon', isCorrect: false },
+      { answerText: 'Microsoft', isCorrect: false },
+    ],
+  },
+  {
+    questionText: 'How many Harry Potter books are there?',
+    answerOptions: [
+      { answerText: '1', isCorrect: false },
+      { answerText: '4', isCorrect: false },
+      { answerText: '6', isCorrect: false },
+      { answerText: '7', isCorrect: true },
+    ],
+  },
   ];
